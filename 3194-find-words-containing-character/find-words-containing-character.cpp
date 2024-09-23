@@ -6,13 +6,11 @@ public:
         vector<int> ans;
         for(int i = 0; i<len;i++)
         {
-            for(int j = 0;j < words[i].size();j++)
+            int pos = words[i].find(x);
+            cout<<pos;
+            if(pos != -1)
             {
-                if(words[i][j] == x)
-                {
-                    ans.push_back(i);
-                    break;
-                }
+                ans.push_back(i);
             }
         }
         return ans;    
