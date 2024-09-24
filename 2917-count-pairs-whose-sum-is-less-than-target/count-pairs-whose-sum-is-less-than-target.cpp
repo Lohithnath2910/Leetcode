@@ -3,20 +3,15 @@ public:
     int countPairs(vector<int>& nums, int target) 
     {
         int count = 0;
-        sort(nums.begin(),nums.end());
-        int left = 0;
-        int right = nums.size() - 1;
-        while(left<right)
+        for(int i = 0;i < nums.size();i++)
         {
-            if(nums[left] + nums[right] < target)
+            for(int j = i+1;j < nums.size();j++)
             {
-                count += right-left;
-                left++;
-            }
-            else
-            {
-                right--;
-            }
+                if(nums[i] + nums[j] < target)
+                {
+                    count++;
+                }
+            }        
         }
         return count;    
     }
