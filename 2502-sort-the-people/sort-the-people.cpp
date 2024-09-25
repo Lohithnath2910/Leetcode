@@ -8,7 +8,7 @@ public:
     }
     vector<string> sortPeople(vector<string>& names, vector<int>& heights) 
     {
-        vector<string> ans;
+        /*vector<string> ans;
         int order[heights.size()];
         int max = 0;
         for(int i = 0;i < heights.size();i++)
@@ -25,13 +25,17 @@ public:
                     swap(&order[j+1],&order[j]);
                 }
             }
-        }
-
+        }*/
+        vector<pair<int,string>> ans;
         for(int i = 0;i < heights.size();i++)
         {
-            cout<<order[i]<<"\n";
-            ans.push_back(names[order[i]]);
+            ans.push_back({heights[i],names[i]});
         }
-        return ans;   
+        sort(ans.rbegin(),ans.rend());
+        for(int i = 0;i < heights.size();i++)
+        {
+            names[i] = ans[i].second;
+        }
+        return names;   
     }
 };
