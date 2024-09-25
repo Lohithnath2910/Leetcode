@@ -14,10 +14,6 @@ public:
                 sum += i;
                 sum += num/i;
             }
-            if(sum > num)
-            {
-                return false;
-            }
         }
         if(sum == num)
         return true;
