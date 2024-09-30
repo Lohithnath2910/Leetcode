@@ -10,20 +10,19 @@ class Solution {
 public:
     bool hasCycle(ListNode *head) 
     {
-        int temp = 99999;
-        while(temp != 0)
+        while(head != NULL)
         {
-            if(head == NULL)
+            if(head->val == -99999)
             {
-                return false;
+                return true;
                 break;
             }
             else
             {
+                head->val = -99999;
                 head = head->next;
-                temp--;
             }
         }
-        return true;
+        return false;
     }
 };
