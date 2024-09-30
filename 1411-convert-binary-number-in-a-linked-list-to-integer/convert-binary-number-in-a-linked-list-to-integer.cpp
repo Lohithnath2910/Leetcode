@@ -15,12 +15,10 @@ public:
         vector<int> store;
         int dec = 0;
         int power = 0;
-        int j = 0;
         while(head != NULL)
         {
             store.push_back(head->val);
             head = head->next;
-            j++;
         }
         int i = store.size()-1;
         while(power <= store.size() && i >= 0)
