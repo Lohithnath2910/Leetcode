@@ -7,7 +7,7 @@ public:
         {
             if((nums.size()) % (i+1) == 0)
             {
-                sum += pow(nums[i],2);
+                sum += nums[i]*nums[i];
             }
         }
         return sum;    
