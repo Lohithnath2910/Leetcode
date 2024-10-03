@@ -8,7 +8,7 @@ public:
             if((flowerbed[i] == 0) && (i == 0 || flowerbed[i-1] == 0) && (i == flowerbed.size()-1 || flowerbed[i+1] == 0))
             {
                 count1--;
-                ++i;
+                i++;
             }
         }
         if(count1 > 0)
