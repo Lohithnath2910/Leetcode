@@ -10,11 +10,8 @@ public:
                 count += (nums[i]+1 - nums[i+1]);
                 nums[i+1] = nums[i]+1;
             }
-            /*else
-            {
-                count += (nums[i]+1 - nums[i+1]);
-                nums[i+1] = nums[i]+1;
-            }*/
+            else
+            continue;
         }
         return count;
     }
