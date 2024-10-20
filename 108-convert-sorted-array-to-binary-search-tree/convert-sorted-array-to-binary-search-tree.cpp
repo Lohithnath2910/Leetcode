@@ -15,7 +15,7 @@ public:
     {
         if(l<=h)
         {
-            int mid = l+ (h-l)/2;
+            int mid = (l+h)/2;
             TreeNode* root = new TreeNode(nums[mid]);
             root->left = BST(nums,l,mid-1);
             root->right = BST(nums,mid+1,h);
