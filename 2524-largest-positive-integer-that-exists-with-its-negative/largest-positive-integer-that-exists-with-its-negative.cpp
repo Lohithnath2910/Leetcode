@@ -4,7 +4,6 @@ public:
     {
         int f = 0;
         int r = nums.size() - 1; 
-   
         sort(nums.begin(),nums.end());
         while(f < r)
         {
