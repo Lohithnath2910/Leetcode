@@ -13,7 +13,7 @@ public:
             }
             
             else if((nums[f] + nums[r]) < 0)
-                f++;
+            f++;
             
             else 
             r--;
