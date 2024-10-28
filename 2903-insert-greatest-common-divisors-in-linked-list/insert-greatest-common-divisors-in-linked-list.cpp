@@ -19,7 +19,7 @@ public:
         ListNode* temp = head;
         while(temp->next != NULL)
         {
-            ListNode* l = new ListNode(gcd(temp->val,temp->next->val),temp->next);
+            ListNode* l = new ListNode(__gcd(temp->val,temp->next->val),temp->next);
             temp->next = l;
             temp=temp->next->next;
         }
