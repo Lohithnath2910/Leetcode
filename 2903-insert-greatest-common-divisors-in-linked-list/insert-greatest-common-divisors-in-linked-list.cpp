@@ -10,7 +10,7 @@
  */
 class Solution {
 public:
-    int gcd(int x,int y)
+    /*int gcd(int x,int y)
     {
         int res = min(x,y);
         while(res > 1)
@@ -22,7 +22,7 @@ public:
             res--;
         }
         return res;
-    }
+    }*/
 
     ListNode* insertGreatestCommonDivisors(ListNode* head) 
     {
