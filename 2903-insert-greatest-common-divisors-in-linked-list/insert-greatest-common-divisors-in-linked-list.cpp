@@ -10,20 +10,6 @@
  */
 class Solution {
 public:
-    /*int gcd(int x,int y)
-    {
-        int res = min(x,y);
-        while(res > 1)
-        {
-            if(x % res == 0 && y % res == 0)
-            {
-                break;
-            }
-            res--;
-        }
-        return res;
-    }*/
-
     ListNode* insertGreatestCommonDivisors(ListNode* head) 
     {
         if(head == NULL || head->next == NULL)
