@@ -13,7 +13,7 @@ public:
     ListNode* mergeNodes(ListNode* head) 
     {
         ListNode* temp = head->next;
-        ListNode* sol = NULL;
+        ListNode* sol = temp;
         ListNode* solt = NULL;
         int sum = 0;
         while(temp != NULL)
