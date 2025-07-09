@@ -1,5 +1,4 @@
 class Solution(object):
     def getConcatenation(self, nums):
-        res = 2*nums
-        return res
+        return 2*nums
         
