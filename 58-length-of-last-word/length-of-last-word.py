@@ -4,7 +4,7 @@ class Solution(object):
         s = list(s)
         count = 0
         char = 0
-        if(len(s) == 1 or len(s) == 2):
+        if(len(s) == 1):
             return 1
         else:
             for i in range(len(s)-1, -1, -1):
