@@ -1,6 +1,6 @@
 class Solution(object):
     def numUniqueEmails(self, emails):
-        temp1 = []
+        temp1 = set()
         for i in emails:
             name,dom = i.split('@')
             temp = ""
@@ -12,7 +12,6 @@ class Solution(object):
                 else:
                     temp += j
             lol = temp+"@"+dom
-            if (lol not in temp1):
-                temp1.append(lol)
+            temp1.add(lol)
         return len(temp1)
         
