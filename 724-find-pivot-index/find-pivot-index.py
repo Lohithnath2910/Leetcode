@@ -1,10 +1,15 @@
 class Solution(object):
     def pivotIndex(self, nums):
-        for i in range(len(nums)):
-            l = sum(nums[:i])
-            r = sum(nums[i+1:])
+        n = len(nums)
+        pre = [0]
+        for i in range(n):
+            pre.append(pre[i] + nums[i])
+        
+        for i in range(n):
+            left = pre[i]
+            right = pre[n] - pre[i+1]
 
-            if(l == r):
+            if(left == right):
                 return i
         return -1
 
