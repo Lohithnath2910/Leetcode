@@ -2,12 +2,17 @@ class NumArray(object):
 
     def __init__(self, nums):
         self.k = []
+        temp = 0
         for i in nums:
-            self.k.append(i)
+            temp += i
+            self.k.append(temp)
 
 
     def sumRange(self, left, right):
-        return sum(self.k[left:right+1])
+        if(left > 0 and right > 0):
+            return self.k[right] - self.k[left-1]
+        else:
+            return self.k[left or right]
 
         
         
