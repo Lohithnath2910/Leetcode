@@ -6,14 +6,14 @@ class Solution:
         def bf(i):
             q = deque()
             q.append(i)
-            v[i] = True
 
             while q:
                 no = q.popleft()
-                for k in rooms[no]:
-                    if v[k] == False:
-                        v[k] = True
-                        q.append(k)
+                if v[no] != True:
+                    v[no] = True
+                    for k in rooms[no]:
+                        if v[k] == False:
+                            q.append(k)
                 
         bf(0)
         
