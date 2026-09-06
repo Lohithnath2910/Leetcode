@@ -1,18 +1,9 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        # for i in range(len(nums)):
-        #     for j in range(i+1,len(nums)):
-        #         if(target == (nums[i] + nums[j])):
-        #            return [i,j]
-        # return []
-
-        temp1 = {}
-
-        for i,j in enumerate(nums):
-            temp = target - j
-            if temp in temp1:
-                return [temp1[temp],i]
-            temp1[j] = i
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = {}
+        for i in range(len(nums)):
+            co = target - nums[i]
+            if co in d:
+                return [d[co],i]
+            d[nums[i]] = i
         return []
-
-            
