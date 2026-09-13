@@ -10,13 +10,9 @@ class Solution:
             return
         
         if o < ma:
-            s += "("
-            self.ss(res,s,o+1,c,ma)
-            s = s[:-1]
+            self.ss(res,s+"(",o+1,c,ma)
         
         if c < o:
-            s += ")"
-            self.ss(res,s,o,c+1,ma)
-            s = s[:-1]
-
+            self.ss(res,s+")",o,c+1,ma)
+        
         
